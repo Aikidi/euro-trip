@@ -1,0 +1,140 @@
+.feedback {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-left: 26px;
+
+  @media (max-width: 1023px) {
+    padding-left: 0;
+  }
+}
+
+.feedback__wrapper {
+  min-height: 455px;
+  background-image: url("../img/feedback-bkg.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/feedback-bkg@2x.jpg");
+  }
+
+  @media (max-width: 767px) {
+    background-image: none;
+    min-height: 0;
+  }
+}
+
+.feedback__form {
+  box-sizing: border-box;
+  position: absolute;
+  top: 70px;
+  right: 2px;
+  width: 656px;
+  min-height: 315px;
+  padding-top: 50px;
+  background-color: $white;
+  box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
+  border-radius: 5px;
+  text-align: center;
+
+  @media (max-width: 1023px) {
+    right: 50%;
+    transform: translateX(50%);
+    width: 658px;
+    min-height: 311px;
+  }
+
+  @media (max-width: 767px) {
+    position: static;
+    transform: none;
+    min-height: 441px;
+    background-color: $lightgray;
+    box-shadow: none;
+    border-radius: none;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: auto;
+  }
+}
+
+.feedback__title {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-size: 25px;
+  line-height: 32px;
+  font-weight: 600;
+
+  @media (max-width: 767px) {
+    margin-bottom: 19px;
+  }
+}
+
+.feedback__text {
+  margin-top: 0;
+  margin-bottom: 23px;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 19px;
+  }
+}
+
+.feedback__field {
+  box-sizing: border-box;
+  margin-right: 16px;
+  margin-bottom: 25px;
+  padding: 0;
+  padding-left: 12px;
+  width: 269px;
+  height: 50px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  color: $darkgray;
+  border: 1px solid rgba(44, 46, 63, 0.3);
+  border-radius: none;
+
+  &--email {
+    margin-right: 0;
+  }
+
+  &--phone {
+    padding-left: 25px;
+  }
+
+  &::placeholder {
+    color: $darkgray;
+  }
+
+  @media (max-width: 1023px) {
+    margin-bottom: 20px;
+    padding-left: 14px;
+
+    &--phone {
+      padding-left: 26px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    margin-right: 0;
+    min-width: 100%;
+  }
+}
+
+.feedback__button {
+  min-height: 50px;
+  min-width: 176px;
+  text-align: center;
+
+  @media (max-width: 1023px) {
+    min-width: 250px;
+  }
+
+  @media (max-width: 767px) {
+    min-width: 100%;
+  }
+}

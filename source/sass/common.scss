@@ -1,0 +1,43 @@
+.page {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $black;
+}
+
+.page__body {
+  position: relative;
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 1920px;
+  min-width: $mobile-width;
+}
+
+.content-wrapper {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-button {
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: $red;
+  color: $white;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  @media (max-width: 1023px) {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+  }
+
+  &:hover {
+    background-color: $lightred;
+  }
+}

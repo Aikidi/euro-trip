@@ -1,3 +1,16 @@
-h1 {
-  color: red;
-}
+@import "fonts.scss";
+@import "variables.scss";
+@import "common.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page-header.scss";
+@import "blocks/banner.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/next-trips.scss";
+@import "blocks/contacts.scss";
+@import "blocks/corporate-trips.scss";
+@import "blocks/places.scss";
+@import "blocks/feedback.scss";
+@import "blocks/prices.scss";
+@import "blocks/tour.scss";
+@import "blocks/reviews.scss";
+@import "blocks/modal.scss";

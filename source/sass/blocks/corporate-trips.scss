@@ -1,0 +1,23 @@
+.corporate-trips {
+  grid-area: corporate-trips;
+  padding-left: 49px;
+  padding-right: 20px;
+
+  @media (max-width: 1023px) {
+    text-align: center;
+    border-top: 1px solid #d7d9df;
+    padding: 0;
+    padding-top: 30px;
+
+    @media (max-width: 767px) {
+      border-top: none;
+      padding-top: 15px;
+    }
+  }
+}
+
+.corporate-trips .page-footer__sectoion-title {
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+}

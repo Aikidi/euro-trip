@@ -1,0 +1,73 @@
+.page-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "next-trips contacts corporate-trips";
+  padding-top: 170px;
+  padding-bottom: 80px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr 332px;
+    grid-template-areas:
+      "next-trips contacts"
+      "corporate-trips corporate-trips";
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "next-trips"
+      "contacts"
+      "corporate-trips";
+    padding-top: 68px;
+    padding-bottom: 25px;
+  }
+}
+
+.page-footer.content-wrapper {
+  padding-left: 26px;
+  padding-right: 4px;
+
+  @media (max-width: 1023px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.page-footer__sectoion {
+  border-right: 1px solid #d7d9df;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: 767px) {
+    border-bottom: 1px solid #d7d9df;
+    text-align: center;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.page-footer__sectoion-title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 600;
+
+  @media (max-width: 767px) {
+    margin-bottom: 17px;
+  }
+}
+
+.page-footer__sectoion-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: $darkgray;
+  opacity: 50%;
+}

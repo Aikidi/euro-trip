@@ -1,0 +1,131 @@
+.modal {
+  position: fixed;
+  z-index: 5;
+  display: flex;
+/*  outline: 5px solid lightblue;
+  outline-offset: -5px;*/
+  width: 728px;
+  min-height: 444px;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fBf8f8;
+  font-size: 25px;
+  line-height: 42px;
+  letter-spacing: 0.2px;
+  text-align: center;
+
+  &---buy {
+    background-image: url("../img/modal-bkg.jpg");
+    background-repeat: no-repeat;
+  }
+
+  &--success {
+    top: 70vh;
+  }
+
+  &--open {
+    display: initial;
+  }
+
+  &--closed {
+    display: none;
+  }
+}
+
+.modal__content {
+  width: 100%;
+}
+
+.modal---buy .modal__content {
+  width: 390px;
+  margin-left: auto;
+}
+
+.modal--success .modal__content {
+  padding-top: 179px;
+}
+
+.modal__close-button {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(20, 21, 23, 0.2);
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(20, 21, 23, 0.2);
+    transform: rotate(-45deg);
+  }
+}
+
+.modal__form {
+  padding-top: 47px;
+  padding-left: 59px;
+  padding-right: 61px;
+}
+
+
+.modal__form-title {
+  font-size: 25px;
+  line-height: 42px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.modal__form-field {
+  box-sizing: border-box;
+/*  position: relative;*/
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  background: $white;
+  border: 1px solid #d7d9df;
+  padding: 15px;
+  padding-top: 17px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+
+  &--phone {
+    padding-left: 25px;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      color: $red;
+      position: absolute;
+      z-index: 100;
+      top: 0;
+    }
+  }
+}
+
+.modal__form-button {
+  width: 176px;
+  min-height: 50px;
+}
+
+/*&::placeholder {
+    color: $darkgray;
+  }*/

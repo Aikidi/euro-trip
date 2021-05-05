@@ -1,0 +1,254 @@
+.places {
+  padding-top: 199px;
+  padding-bottom: 48px;
+
+  @media (max-width: 1023px) {
+    padding-top: 80px;
+    padding-bottom: 98px;
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+  }
+}
+
+.places.content-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (max-width: 1023px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.places__title {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  color: $black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 65%;
+    background-color: $red;
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+  font-size: 55px;
+  line-height: 80px;
+  font-weight: 600;
+  max-width: 350px;
+  letter-spacing: -1.25px;
+  padding-bottom: 35px;
+  margin-bottom: 30px;
+
+
+  @media (max-width: 1023px) {
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: normal;
+    display: block;
+    max-width: none;
+    text-align: center;
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 10px;
+  }
+}
+
+.places__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.47px;
+  color: rgba(44, 46, 63, 0.7);
+  margin-bottom: 5px;
+
+  @media (max-width: 1023px) {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 38px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 18px;
+  }
+}
+
+.places__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.places__item {
+  position: relative;
+  width: 29.9%;
+  min-width: 288px;
+  margin-right: 5.1%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+    margin-left: 0;
+
+    &:last-child {
+      margin-left: 0;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 60px;
+  }
+
+  @media (max-width: 1023px) {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+
+      &:last-child {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 35px;
+
+    &:nth-child(odd) {
+      margin-right: auto;
+      margin-left: auto;
+
+      &:last-child {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+.places__item-link {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 430px;
+  overflow: hidden;
+
+  @media (max-width: 1023px) {
+    width: 288px;
+    height: 425px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 21, 23, 0.6);
+    z-index: 2;
+    display: none;
+  }
+
+  &::after {
+    content: "Смотреть подробнее";
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+    left: 50%;
+    top: 177px;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 266px;
+    min-height: 77px;
+    padding: 10px;
+    padding-top: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+    color: $white;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.places__item-link:hover {
+  &::before,
+  &::after {
+    display: block;
+  }
+}
+
+.places__item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.places__item-title {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  box-sizing: border-box;
+  padding-top: 15px;
+  min-width: 215px;
+  min-height: 62px;
+  background-color: $white;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 500;
+  color: $black;
+  text-align: center;
+}

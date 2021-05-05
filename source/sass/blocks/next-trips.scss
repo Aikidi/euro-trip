@@ -1,0 +1,47 @@
+.next-trips {
+  grid-area: next-trips;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 3px;
+    margin-bottom: 30px;
+  }
+}
+
+.next-trips.page-footer__sectoion {
+  @media (max-width: 767px) {
+    border-right: none;
+  }
+}
+
+.next-trips .page-footer__sectoion-text {
+  display: flex;
+  line-height: 26px;
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    line-height: 27px;
+  }
+}
+
+.next-trips__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 130px;
+
+  @media (max-width: 1023px) {
+    max-width: 126px;
+  }
+
+  @media (max-width: 768px) {
+    width: 50%;
+    max-width: 140px;
+    margin-bottom: 10px;
+  }
+}
