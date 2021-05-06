@@ -2,37 +2,51 @@
   grid-area: contacts;
   padding-left: 90px;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     padding-left: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 22px;
     border-right: none;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     padding-left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 16px;
+    padding-bottom: 15px;
+    margin-bottom: 13px;
   }
 }
 
 .contacts .page-footer__sectoion-title {
-  @media (max-width: 767px) {
-    padding-right: 20px;
+  @media (max-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-right: 18px;
+    margin-bottom: 20px;
   }
 }
 
 .contacts__mail {
   position: relative;
   margin: 0;
-  margin-bottom: 15px;
-  padding-left: 40px;
+  margin-bottom: 16px;
+  padding-left: 42px;
   padding-top: 3px;
   font-size: 14px;
   line-height: 17px;
   color: $red;
   text-decoration: underline;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-right: 18px;
+  }
 
   &::before {
     content: "";
@@ -48,13 +62,13 @@
 .contacts__mail-label {
   display: none;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     display: initial;
   }
 }
 
 .contacts__mail-adress {
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     display: none;
   }
 }
@@ -62,12 +76,17 @@
 .contacts__phone {
   position: relative;
   margin: 0;
-  padding-left: 40px;
+  padding-left: 42px;
   padding-top: 3px;
   font-size: 16px;
   line-height: 32px;
   color: $red;
   text-decoration: underline;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 18px;
+  }
 
   &::before {
     content: "";

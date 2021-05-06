@@ -31,7 +31,7 @@
   font-weight: 700;
   letter-spacing: 2px;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     font-size: 10px;
     line-height: 12px;
     font-weight: 500;
@@ -39,5 +39,9 @@
 
   &:hover {
     background-color: $lightred;
+  }
+
+  &:active {
+    background-color: $darkred;
   }
 }

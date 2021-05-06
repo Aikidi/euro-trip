@@ -3,13 +3,13 @@
   padding-left: 49px;
   padding-right: 20px;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     text-align: center;
-    border-top: 1px solid #d7d9df;
+    border-top: 1px solid $silvergray;
     padding: 0;
     padding-top: 30px;
 
-    @media (max-width: 767px) {
+    @media (max-width: $tablet-width) {
       border-top: none;
       padding-top: 15px;
     }
@@ -17,7 +17,7 @@
 }
 
 .corporate-trips .page-footer__sectoion-title {
-  @media (max-width: 767px) {
-    margin-bottom: 20px;
+  @media (max-width: $tablet-width) {
+    margin-bottom: 22px;
   }
 }

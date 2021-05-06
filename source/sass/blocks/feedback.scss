@@ -5,7 +5,7 @@
   max-width: 1200px;
   padding-left: 26px;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     padding-left: 0;
   }
 }
@@ -14,12 +14,13 @@
   min-height: 455px;
   background-image: url("../img/feedback-bkg.jpg");
   background-repeat: no-repeat;
+  background-size: 844px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/feedback-bkg@2x.jpg");
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     background-image: none;
     min-height: 0;
   }
@@ -38,14 +39,14 @@
   border-radius: 5px;
   text-align: center;
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     right: 50%;
     transform: translateX(50%);
     width: 658px;
     min-height: 311px;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     position: static;
     transform: none;
     min-height: 441px;
@@ -67,8 +68,8 @@
   line-height: 32px;
   font-weight: 600;
 
-  @media (max-width: 767px) {
-    margin-bottom: 19px;
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
   }
 }
 
@@ -78,12 +79,59 @@
   font-size: 16px;
   line-height: 24px;
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     margin-bottom: 19px;
   }
 }
 
+.valid-check .feedback__field {
+  &:invalid {
+    border-color: $red;
+  }
+}
+
+.feedback__field-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+
+  &::after {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    content: "Данные не верны";
+    font-size: 12px;
+    color: $red;
+    z-index: 5;
+    display: none;
+  }
+
+  &--required {
+    &::before {
+      position: absolute;
+      top: 8px;
+      left: 11px;
+      content: "*";
+      width: 10px;
+      height: 10px;
+      color: $red;
+      z-index: 5;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.feedback__field-wrapper.invalid {
+  &::after {
+    display: block;
+  }
+}
+
 .feedback__field {
+  position: relative;
   box-sizing: border-box;
   margin-right: 16px;
   margin-bottom: 25px;
@@ -97,6 +145,15 @@
   color: $darkgray;
   border: 1px solid rgba(44, 46, 63, 0.3);
   border-radius: none;
+  outline: none;
+
+  &:hover {
+    border-color: $lightgray;
+  }
+
+  &:focus {
+    border-color: $gray;
+  }
 
   &--email {
     margin-right: 0;
@@ -110,7 +167,7 @@
     color: $darkgray;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: $desktop-width) {
     margin-bottom: 20px;
     padding-left: 14px;
 
@@ -119,7 +176,7 @@
     }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     margin-right: 0;
     min-width: 100%;
   }
@@ -127,14 +184,15 @@
 
 .feedback__button {
   min-height: 50px;
-  min-width: 176px;
+  width: 176px;
   text-align: center;
 
-  @media (max-width: 1023px) {
-    min-width: 250px;
+  @media (max-width: $desktop-width) {
+    width: 250px;
   }
 
-  @media (max-width: 767px) {
-    min-width: 100%;
+  @media (max-width: $tablet-width) {
+    width: 288px;
+    padding-top: 4px;
   }
 }
